@@ -1,0 +1,97 @@
+.e-btn{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: $body-color;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: $btn-border-radius;
+    box-shadow: $btn-box-shadow;
+    cursor: pointer;
+    transition: .3s;  
+    border: $btn-border-width solid transparent;
+    @include btn-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+    &.disabled, 
+    &[disabled]{
+        cursor: not-allowed; 
+        box-shadow: none; 
+        >*{
+            pointer-events: none;
+        }
+    }
+    &:focus{
+        box-shadow: $box-shadow;
+    }
+}
+
+
+.e-btn-lg{
+    @include btn-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+    &:focus{
+        box-shadow: $box-shadow-lg;
+    }
+}
+
+.e-btn-sm{
+    @include btn-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+    &:focus{
+        box-shadow: $box-shadow-sm;
+    }
+}  
+
+.e-btn-primary{
+    @include btn-style($primary, $primary, $white)
+}
+
+.e-btn-default,.e-btn-dashed{
+    @include btn-style($white, $gray-400, $body-color, $white, $primary, $primary); 
+}
+
+.e-btn-dashed{ 
+    border-style: dashed;
+}  
+
+.e-btn-link{
+    font-weight: $font-weight-normal;
+    color: $btn-link-color;
+    text-decoration: $link-decoration;
+    box-shadow: none;
+
+    &:hover{
+        color: $btn-link-hover-color;
+        text-decoration: $link-hover-decoration;
+    } 
+
+    &:disabled,
+    &.disabled{
+        color: $btn-link-disabled-color;
+        pointer-events: none;
+    }
+    &.e-btn-danger{
+        border: none;
+        &:hover{ 
+            color: lighten($danger, 10%) 
+        }
+    }
+} 
+.e-btn-default,
+.e-btn-dashed,
+.e-btn-link{
+    &.e-btn-danger, &.e-btn-danger:hover{ 
+        background: none;
+        color: $danger;
+    }
+}
+
+.e-btn-danger{
+    @include btn-style($danger, $danger, $white);
+    &:focus{ 
+        box-shadow: $box-danger-shadow;
+    }
+    &.e-btn-lg:focus{ 
+        box-shadow: $box-danger-shadow-lg;
+    }
+    &.e-btn-sm:focus{ 
+        box-shadow: $box-danger-shadow-sm;
+    }
+}

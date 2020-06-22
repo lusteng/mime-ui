@@ -1,25 +1,26 @@
 /*
  * @Editors: Liu baitong
  * @Date: 2020-05-26 16:56:08
- * @LastEditTime: 2020-05-27 11:43:24
+ * @LastEditTime: 2020-06-22 17:37:19
  * @Description: global color: base color & system color
  */ 
 
 
-// base color 
+// base color  
+$theme:   #0d6efd !default;
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+$gray-200: #f5f5f5 !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
+$gray-400: #d9d9d9 !default;
+$gray-500: #bebebe !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #636363 !default;
 $black:    #000 !default;
 
-$blue:    #0d6efd !default;
+$blue:    $theme !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
@@ -28,7 +29,8 @@ $orange:  #fd7e14 !default;
 $yellow:  #fadb14 !default;
 $green:   #52c41a !default;
 $teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$cyan:    #17a2b8 !default; 
+$danger:  #ff4d4f !default;
 
 // system color
 $primary:       $blue !default;
@@ -88,7 +90,7 @@ $h6-font-size:                $font-size-base !default;
 // 链接
 $link-color:                              $primary !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        lighten($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
 
 // body
@@ -171,7 +173,7 @@ $code-color:                        $pink !default;
 $pre-color:                         null !default;
 
 // options 可配置选项
-$enable-pointer-cursor-for-buttons:           true !default;
+$enable-pointer-cursor-for-btns:           true !default;
 
 // 边框 和 border radius
 
@@ -183,10 +185,13 @@ $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 
 // 不同类型的 box shadow
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow-sm:               0 0 4px rgba($theme, .2) !default;
+$box-shadow:                  0 0 5px rgba($theme, .25) !default;
+$box-shadow-lg:               0 0 6px rgba($theme, .3) !default;
+$box-danger-shadow-sm:        0 0 4px rgba($danger, .2) !default;
+$box-danger-shadow:           0 0 5px rgba($danger, .25) !default;
+$box-danger-shadow-lg:        0 0 6px rgba($danger, .3) !default;
+$box-shadow-inset:            inset 0 1px 2px rgba($theme, .075) !default;
 
 // 按钮
 // 按钮基本属性
@@ -212,11 +217,14 @@ $btn-border-width:            $border-width !default;
 // 按钮其他
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-disabled-opacity:        .65 !default;
+$btn-disabled-background:     $gray-200 !default;
+$btn-disabled-border:         $gray-400 !default;
+$btn-disabled-color:          $gray-500 !default;
 
 // 链接按钮
 $btn-link-color:              $link-color !default;
 $btn-link-hover-color:        $link-hover-color !default;
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-disabled-color:     $gray-500 !default;
 
 
 // 按钮 radius
@@ -224,7 +232,7 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$btn-transition:              color .3s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 // menu
 $menu-border-width:            $border-width !default;

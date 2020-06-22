@@ -1,0 +1,13 @@
+
+@keyframes fadeEffect {
+    100% {
+        opacity: 0
+    }
+} 
+
+@keyframes waveEffect {
+    100% { 
+        box-shadow: 0 0 0 linen($theme, 10%);
+        box-shadow: 0 0 0 6px darken($theme, 15%);
+    }
+}

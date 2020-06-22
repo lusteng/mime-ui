@@ -1,72 +1,98 @@
-@mixin button-size($padding-y, $padding-x, $font-size, $border-raduis) {
+// !---- Button 
+@mixin btn-size($padding-y, $padding-x, $font-size, $border-raduis) {
     padding: $padding-y $padding-x;
     font-size: $font-size;
     border-radius: $border-raduis;
   }
-  
-  @mixin button-style(
-    $background,
-    $border,
-    $color,
-    $hover-background: lighten($background, 7.5%),
-    $hover-border: lighten($border, 10%),
-    $hover-color: $color,
-  ) {
-    color: $color;
-    background: $background;
-    border-color: $border;
-    &:hover {
+
+@mixin btn-style(
+  $background,
+  $border,
+  $color,
+  $hover-background: lighten($background, 7.5%),
+  $hover-border: lighten($border, 10%),
+  $hover-color: $color,
+) {
+  color: $color;
+  background: $background;
+  border-color: $border;
+  &:hover {
+    color: $hover-color;
+    background: $hover-background;
+    border-color: $hover-border;    
+  }  
+  &:focus,
+  &.focus {
+    &.primary{
       color: $hover-color;
-      background: $hover-background;
-      border-color: $hover-border;    
+      background: $hover-background; 
     }
-    &:focus,
-    &.focus {
-      color: $hover-color;
-      background: $hover-background;
-      border-color: $hover-border;    
-    }
-    &:disabled,
-    &.disabled {
-      color: $color;
-      background: $background;
-      border-color: $border;    
-    }
+    outline: none;
   }
-  
-  @mixin zoom-animation(
-    $direction: 'top',
-    $scaleStart: scaleY(0),
-    $scaleEnd: scaleY(1),
-    $origin: center top,
-  ) {
-    .zoom-in-#{$direction}-enter {
-      opacity: 0;
-      transform: $scaleStart;
-    }
-    .zoom-in-#{$direction}-enter-active {
-      opacity: 1;
-      transform: $scaleEnd;
-      transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
-      transform-origin: $origin
-    }
-    .zoom-in-#{$direction}-exit {
-      opacity: 1;
-    }
-    .zoom-in-#{$direction}-exit-active {
-      opacity: 0;
-      transform: $scaleStart;
-      transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
-      transform-origin: $origin;
-    }
+  &:disabled,
+  &.disabled {
+    color: $btn-disabled-color; 
+    border-color: $btn-disabled-border;    
+    background-color: $btn-disabled-background; 
   }
-  
-  @mixin border-right-radius($raduis) {
-    border-top-right-radius: $raduis;
-    border-bottom-right-radius: $raduis;
+}
+
+@mixin zoom-animation(
+  $direction: 'top',
+  $scaleStart: scaleY(0),
+  $scaleEnd: scaleY(1),
+  $origin: center top,
+) {
+  .zoom-in-#{$direction}-enter {
+    opacity: 0;
+    transform: $scaleStart;
   }
-  
-  @mixin border-left-radius($raduis) {
-    border-top-left-radius: $raduis;
-    border-bottom-left-radius: $raduis;
+  .zoom-in-#{$direction}-enter-active {
+    opacity: 1;
+    transform: $scaleEnd;
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+    transform-origin: $origin
   }
+  .zoom-in-#{$direction}-exit {
+    opacity: 1;
+  }
+  .zoom-in-#{$direction}-exit-active {
+    opacity: 0;
+    transform: $scaleStart;
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+    transform-origin: $origin;
+  }
+}
+
+@mixin border-right-radius($raduis) {
+  border-top-right-radius: $raduis;
+  border-bottom-right-radius: $raduis;
+}
+
+@mixin border-left-radius($raduis) {
+  border-top-left-radius: $raduis;
+  border-bottom-left-radius: $raduis;
+}
+
+@mixin position-block-lt($lf: 0, $tp: 0, $w: 100%, $h: 100%) {
+  position: absolute; 
+  left: $lf;
+  top: $tp;
+  width: $w; 
+  height: $h;
+}
+
+@mixin wave-animation{ 
+    position: relative;
+    &::after{
+      @include position-block-lt;
+      content: '';
+      display: block;
+      pointer-events: none;
+      border-radius: inherit; 
+      box-shadow: 0 0 0 0 linen($theme, 10%);
+      opacity: .2;
+      pointer-events: none;
+      animation: fadeEffect 2s cubic-bezier(.08,.82,.17,1),waveEffect .4s cubic-bezier(.08,.82,.17,1);
+    } 
+}
