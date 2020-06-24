@@ -1,6 +1,20 @@
- 
-### scss
+<h1 align="center">memui</h1>
 
-_variables.scss 各种变量以及可配置变量
-_mixins.scss 全局mixins.scss
-_functions.scss 全局functions 
+## Install
+```bash 
+npm install memui
+``` 
+
+## Usage
+
+```jsx
+import { Button } from 'memui'; 
+// @import style
+import 'memui/dist/antd.css';  
+
+const App = () => (
+  <>
+    <Button type="primary">Button</Button> 
+  </>
+);
+```
