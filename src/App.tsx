@@ -45,9 +45,11 @@ function App() {
 <p>
 
 <Button  
+      style={{"color": "yellow", border: "1px solid red"}}
       type='link' 
+      href="http://www.baidu.c"
       danger
-    >dddd</Button>
+    >red dddd</Button>
     &nbsp;
     <Button  
       type='link'

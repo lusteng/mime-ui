@@ -21,6 +21,7 @@ interface BaseButtonProps{
     children: React.ReactNode,
     href?: string,
     danger?: boolean,
+    style?: React.CSSProperties,
     onClick?: React.MouseEventHandler<HTMLElement>
 }
 
@@ -36,9 +37,10 @@ const Button : React.FC<BaseButtonProps> = (props) => {
         type,
         size,
         disabled,
+        danger,
         children,
-        href,
-        danger
+        href, 
+        ...others
     } = props  
     
     const classes = classNames('e-btn', {
@@ -52,6 +54,7 @@ const Button : React.FC<BaseButtonProps> = (props) => {
     if(type === 'link'){
         return <a 
             href={href} 
+            {...others}
             className={classes} 
         >
             {children}
@@ -60,7 +63,8 @@ const Button : React.FC<BaseButtonProps> = (props) => {
         return <button  
             className={classes} 
             disabled={disabled}
-            onClick={handleClick}
+            onClick={handleClick} 
+            {...others}
             // todo
             data-t-wave-animation={wave}
         >  
