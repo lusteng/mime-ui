@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames' 
-
-f
+ ff
 export  enum ButtonType {
     Paramy = 'primary',
     Default = 'default',
