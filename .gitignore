@@ -4,6 +4,9 @@
 /node_modules 
 /.pnp
 .pnp.js
+/**/node_modules
+/site/src/.umi
+/site/dist
 
 # testing
 /coverage

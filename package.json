@@ -1,13 +1,13 @@
 {
   "name": "memui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./dist/index.js",
   "keywords": [
     "React Component",
     "UI"
   ],
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "npm run rm && npm run build-ts && npm run  build-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -16,8 +16,10 @@
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
     "test:nowatch": "cross-env CI=true react-scripts test --passWithNoTests",
-    "prepublish": "npm run test:nowatch && npm run lint && npm run build"
-  }, 
+    "prepublish": "npm run test:nowatch && npm run lint && npm run build", 
+    "site": "cross-env APP_ROOT=site dumi dev", 
+    "site-build": "cross-env APP_ROOT=site dumi build"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run test:nowatch && npm run lint"
@@ -40,6 +42,7 @@
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "cross-env": "^7.0.2",
+    "dumi": "^1.0.31",
     "husky": "^4.2.5",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
