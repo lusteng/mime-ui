@@ -108,6 +108,9 @@
 .e-btn-dashed {
   border-style: dashed; }
 
+.e-btn-text {
+  background-color: none; }
+
 .e-btn-link {
   font-weight: 400;
   color: #0d6efd;

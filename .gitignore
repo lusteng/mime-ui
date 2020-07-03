@@ -6,6 +6,7 @@
 .pnp.js
 /**/node_modules
 /site/src/.umi
+/site/src/.umi-production
 /site/dist
 /src/.umi
 
