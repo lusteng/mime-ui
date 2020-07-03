@@ -16,8 +16,8 @@
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
     "test:nowatch": "cross-env CI=true react-scripts test --passWithNoTests",
-    "prepublish": "npm run test:nowatch && npm run lint && npm run build", 
-    "site": "cross-env APP_ROOT=site dumi dev", 
+    "prepublish": "npm run test:nowatch && npm run lint && npm run build",
+    "site": "cross-env APP_ROOT=site dumi dev",
     "site-build": "cross-env APP_ROOT=site dumi build"
   },
   "husky": {
@@ -43,11 +43,12 @@
     "@types/react-dom": "^16.9.8",
     "cross-env": "^7.0.2",
     "dumi": "^1.0.31",
+    "eslint": "^7.3.1",
     "husky": "^4.2.5",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
     "typescript": "^3.7.5"
