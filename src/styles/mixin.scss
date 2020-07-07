@@ -26,8 +26,7 @@
     &.primary{
       color: $hover-color;
       background: $hover-background; 
-    }
-    outline: none;
+    } 
   }
   &:disabled,
   &.disabled {
@@ -96,3 +95,12 @@
       animation: fadeEffect 2s cubic-bezier(.08,.82,.17,1),waveEffect .4s cubic-bezier(.08,.82,.17,1);
     } 
 }
+
+@mixin blockBtn($color) { 
+  background: $color;
+  border-color : $color;
+  &:hover{ 
+      background: lighten($color, 8%);
+      border-color : lighten($color, 8%);
+  }
+} 

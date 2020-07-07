@@ -23,6 +23,7 @@
     }
     &:focus{
         box-shadow: $box-shadow;
+        outline: none;
     }
 }
 
@@ -76,6 +77,24 @@
         }
     }
 } 
+.e-btn-info{ 
+    @include blockBtn($info);
+}
+.e-btn-success{
+    @include blockBtn($success); 
+}
+.e-btn-warning{
+    @include blockBtn($warning); 
+}
+.e-btn-error{
+    @include blockBtn($error);  
+}
+.e-btn-info,
+.e-btn-success,
+.e-btn-warning,
+.e-btn-error{
+    color: $white;
+}
 .e-btn-default,
 .e-btn-dashed,
 .e-btn-link{

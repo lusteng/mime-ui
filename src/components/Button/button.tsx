@@ -13,7 +13,7 @@ export enum ButtonSize {
 }
 
 interface BaseButtonProps{
-    type?: 'primary' | 'default' | 'link' | 'dashed',
+    type?: 'primary' | 'default' | 'link' | 'dashed' | 'info' | 'success' | 'warning' | 'error',
     size?: 'lg' | 'sm',
     disabled?: boolean,
     children: React.ReactNode,

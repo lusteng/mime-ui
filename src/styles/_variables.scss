@@ -1,7 +1,7 @@
 /*
  * @Editors: Liu baitong
  * @Date: 2020-05-26 16:56:08
- * @LastEditTime: 2020-06-22 17:37:19
+ * @LastEditTime: 2020-07-07 11:56:12
  * @Description: global color: base color & system color
  */ 
 
@@ -31,6 +31,10 @@ $green:   #52c41a !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default; 
 $danger:  #ff4d4f !default;
+$info:    #2db7f5 !default;
+$success: #19be6b !default;
+$warning: #f90 !default;
+$error:   $danger !default;
 
 // system color
 $primary:       $blue !default;
