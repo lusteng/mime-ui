@@ -2,7 +2,7 @@
     position: relative;
     display: inline-block;
     text-align: center;
-    color: $body-color;
+    color: $body-color; 
     white-space: nowrap;
     -webkit-tap-highlight-color: transparent;
     border-radius: $btn-border-radius;
@@ -77,24 +77,18 @@
         }
     }
 } 
-.e-btn-info{ 
-    @include blockBtn($info);
+.e-btn-info{  
+    @include btn-style($info, $info, $white);
 }
 .e-btn-success{
-    @include blockBtn($success); 
+    @include btn-style($success, $success, $white); 
 }
 .e-btn-warning{
-    @include blockBtn($warning); 
+    @include btn-style($warning, $warning, $white);  
 }
 .e-btn-error{
-    @include blockBtn($error);  
-}
-.e-btn-info,
-.e-btn-success,
-.e-btn-warning,
-.e-btn-error{
-    color: $white;
-}
+    @include btn-style($error, $error, $white);   
+} 
 .e-btn-default,
 .e-btn-dashed,
 .e-btn-link{
@@ -103,7 +97,7 @@
         color: $danger;
     }
 }
-
+ 
 .e-btn-danger{
     @include btn-style($danger, $danger, $white);
     &:focus{ 

@@ -6,7 +6,7 @@ filePath: null
 
 # 安装使用
 
-`memui` 基于Typescript的React UI 组件库，后续陆续增加一些需求独特又必须用到的组件。
+`memui` 基于React定制的UI组件库,更多定制组件等待中...
 
 ## 安装
 

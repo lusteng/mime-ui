@@ -3,18 +3,28 @@ module.exports ={
 
     logo: './logo.png',
     favicon: './favicon.ico', 
-    title: "memui", 
+    title: 'memui', 
+    menus: { 
+        '/base': [{
+            title: '基础组件',
+            path: '',
+            children: [
+                'base/Button.md'
+            ]
+        }],   
+        '/use':[{
+            title: '安装使用', 
+            path: '/use' 
+        }]
+    },
     navs: [
         {
             title: '安装使用',
-            path: './src/index.md',
-        }, 
+            path: '/use'
+        },
         {
             title: '基础组件',
-            path: './src/Button.md',
-            children: [ 
-                { title: 'Button 按钮', path: './src/Button.md' }
-            ]
+            path: '/base'
         }
-    ], 
+    ] 
 }

@@ -20,6 +20,7 @@ interface BaseButtonProps{
     href?: string,
     danger?: boolean,
     style?: React.CSSProperties,
+    target?: string,
     onClick?: React.MouseEventHandler<HTMLElement>
 }
 
@@ -38,6 +39,7 @@ const Button : React.FC<BaseButtonProps> = (props) => {
         danger,
         children,
         href, 
+        target,
         ...others
     } = props  
     
@@ -52,6 +54,7 @@ const Button : React.FC<BaseButtonProps> = (props) => {
     if(type === 'link'){
         return <a 
             href={href} 
+            target={target}
             {...others}
             className={classes} 
         >

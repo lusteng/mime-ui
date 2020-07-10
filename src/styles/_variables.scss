@@ -1,7 +1,7 @@
 /*
  * @Editors: Liu baitong
  * @Date: 2020-05-26 16:56:08
- * @LastEditTime: 2020-07-07 11:56:12
+ * @LastEditTime: 2020-07-07 15:10:09
  * @Description: global color: base color & system color
  */ 
 
@@ -65,7 +65,7 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif !default;
 
 // 字体大小
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              14px !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-root:              null !default;

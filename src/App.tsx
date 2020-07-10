@@ -8,12 +8,13 @@ function App() {
   return <>
       <Button type="primary">Primary Button</Button>
       <Button>Default Button</Button>
-      <Button type="dashed">Dashed Button</Button>
-      <br /> 
-      <Button type="info">Link Button</Button>
-      <Button type="success">Link Button</Button>
-      <Button type="warning">Link Button</Button>
-      <Button type="error">Link Button</Button>
+      <Button type="dashed" disabled>Dashed Button</Button> 
+      <Button type="success" disabled>Dashed Button</Button> 
+      <Button type="success" disabled>Dashed Button</Button> 
+      <Button type="error" disabled>Dashed Button</Button> 
+      <Button type="warning" disabled>Dashed Button</Button> 
+      <Button type="info" disabled>Dashed Button</Button> 
+      <Button type="link" target="_self" href="www.baidu.com">link</Button>
   </>
 }
 export default App;
